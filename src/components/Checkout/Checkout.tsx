@@ -9,7 +9,7 @@ const products = [
     name: 'Throwback Hip Bag',
     href: '#',
     color: 'Salmon',
-    price: '90.00XRP',
+    price: '9.00XRP',
     quantity: 1,
     imageSrc: 'img/orangebag.jpeg',
     imageAlt:
@@ -20,7 +20,7 @@ const products = [
     name: 'Medium Stuff Satchel',
     href: '#',
     color: 'Blue',
-    price: '32.00XRP',
+    price: '3.20XRP',
     quantity: 1,
     imageSrc: 'img/bagpack.jpeg',
     imageAlt:
@@ -114,7 +114,7 @@ export function Checkout() {
                   <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <p>Subtotal</p>
-                      <p>262.00XRP</p>
+                      <p>26.20XRP</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">
                       We accept payments with{' '}
@@ -126,6 +126,7 @@ export function Checkout() {
                       </a>
                       .
                     </p>
+                    <p className="mt-0.5 text-sm text-gray-500">This demo is using the testnet.</p>
                     <div className="mt-6">
                       <button className="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         PAY
