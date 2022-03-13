@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gemwallet-store-demo/static/css/main.19ad940f.css",
+    "main.js": "/gemwallet-store-demo/static/js/main.4dba5d9b.js",
+    "static/js/787.7d553300.chunk.js": "/gemwallet-store-demo/static/js/787.7d553300.chunk.js",
+    "index.html": "/gemwallet-store-demo/index.html",
+    "main.19ad940f.css.map": "/gemwallet-store-demo/static/css/main.19ad940f.css.map",
+    "main.4dba5d9b.js.map": "/gemwallet-store-demo/static/js/main.4dba5d9b.js.map",
+    "787.7d553300.chunk.js.map": "/gemwallet-store-demo/static/js/787.7d553300.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19ad940f.css",
+    "static/js/main.4dba5d9b.js"
+  ]
+}
