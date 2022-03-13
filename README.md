@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+First, run husky:
+
+```bash
+npm run prepare
+# or
+yarn prepare
+```
+
+Then, give the proper rights to the githooks:
+
+```bash
+chmod +x .husky/*
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
