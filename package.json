@@ -1,6 +1,7 @@
 {
   "name": "gemwallet-store-demo",
   "version": "0.1.0",
+  "homepage": "https://florianbouron.github.io/gemwallet-store-demo",
   "private": true,
   "dependencies": {
     "@gemwallet/api": "1.0.0",
@@ -28,7 +29,9 @@
     "lint": "next lint --fix",
     "prettier": "prettier --write **/*.{js,ts,tsx}",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +54,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "eslint-config-prettier": "^8.5.0",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.5",
     "postcss": "^8.4.8",
