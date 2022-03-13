@@ -20,6 +20,8 @@ chmod +x .husky/*
 
 In the project directory, you can run:
 
+`npm run deploy -- -m "Deploy React app to GitHub Pages"` to deploy to the github pages.
+
 ### `npm start`
 
 Runs the app in the development mode.\
