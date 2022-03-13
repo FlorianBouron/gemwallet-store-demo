@@ -1,4 +1,5 @@
 import { ShoppingBagIcon } from '@heroicons/react/outline';
+import { useNavbar } from '../../contexts/NavbarContext';
 
 const product = {
   name: 'Basic Tee 6-Pack',
@@ -10,6 +11,7 @@ const product = {
 };
 
 export function Navbar() {
+  const { setIsOpen } = useNavbar();
   return (
     <nav className="pt-6 flex justify-between" aria-label="Breadcrumb">
       <div>
@@ -49,7 +51,10 @@ export function Navbar() {
         </ol>
       </div>
       <div>
-        <button className="group -m-2 p-2 flex items-center px-4 sm:px-6 lg:px-8">
+        <button
+          className="group -m-2 p-2 flex items-center px-4 sm:px-6 lg:px-8"
+          onClick={() => setIsOpen(true)}
+        >
           <ShoppingBagIcon
             className="flex-shrink-0 h-6 w-6 text-indigo-500 group-hover:text-indigo-600"
             aria-hidden="true"

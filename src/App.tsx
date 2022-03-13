@@ -2,13 +2,16 @@
 import { Checkout } from './components/Checkout';
 import { Navbar } from './components/Navbar';
 import { ProductOverview } from './components/ProductOverview';
+import { NavbarProvider } from './contexts/NavbarContext';
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <NavbarProvider>
+        <Navbar />
+        <Checkout />
+      </NavbarProvider>
       <ProductOverview />
-      <Checkout />
     </>
   );
 }

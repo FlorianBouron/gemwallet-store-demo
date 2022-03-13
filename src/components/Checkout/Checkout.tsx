@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
+import { useNavbar } from '../../contexts/NavbarContext';
 
 const products = [
   {
@@ -29,11 +30,11 @@ const products = [
 ];
 
 export function Checkout() {
-  const [open, setOpen] = useState(true);
+  const { isOpen, setIsOpen } = useNavbar();
 
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="fixed inset-0 overflow-hidden" onClose={setOpen}>
+    <Transition.Root show={isOpen} as={Fragment}>
+      <Dialog as="div" className="fixed inset-0 overflow-hidden" onClose={setIsOpen}>
         <div className="absolute inset-0 overflow-hidden">
           <Transition.Child
             as={Fragment}
@@ -68,7 +69,7 @@ export function Checkout() {
                         <button
                           type="button"
                           className="-m-2 p-2 text-gray-400 hover:text-gray-500"
-                          onClick={() => setOpen(false)}
+                          onClick={() => setIsOpen(false)}
                         >
                           <span className="sr-only">Close panel</span>
                           <XIcon className="h-6 w-6" aria-hidden="true" />
