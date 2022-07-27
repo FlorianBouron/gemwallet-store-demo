@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import { isConnected, transactionRequest } from '@gemwallet/api';
+import { isConnected, sendPayment } from '@gemwallet-beta/api';
 import { useNavbar } from '../../contexts/NavbarContext';
 import { Modal } from '../Modal';
 
@@ -39,17 +39,17 @@ export function Checkout() {
     isConnected().then((isConnected) => {
       if (isConnected) {
         const transaction = {
-          chain: 'xrp',
-          network: 'TEST',
-          transaction: 'payment',
           amount: '26.20',
-          destination: 'rNvFCZXpDtGeQ3bVas95wGLN6N2stGmA9o',
-          token: 'xrp',
-          apiVersion: 1
+          destination: 'rNvFCZXpDtGeQ3bVas95wGLN6N2stGmA9o'
         };
-        transactionRequest(transaction as any).then((status) => {
-          setPaymentStatus(status);
-        });
+        sendPayment(transaction)
+          .then((trHash) => {
+            console.log('Transaction Hash: ', trHash);
+            setPaymentStatus('success');
+          })
+          .catch((e) => {
+            console.log('THE ERROR: ', e);
+          });
       } else {
         setPaymentStatus('fail');
       }
@@ -104,7 +104,7 @@ export function Checkout() {
 
                       <div className="mt-8">
                         <div className="flow-root">
-                          <ul role="list" className="-my-6 divide-y divide-gray-200">
+                          <ul className="-my-6 divide-y divide-gray-200">
                             {products.map((product) => (
                               <li key={product.id} className="flex py-6">
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">

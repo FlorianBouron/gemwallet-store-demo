@@ -4,7 +4,7 @@
   "homepage": "https://florianbouron.github.io/gemwallet-store-demo",
   "private": true,
   "dependencies": {
-    "@gemwallet/api": "^1.0.2",
+    "@gemwallet-beta/api": "^2.0.0-beta",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
     "@tailwindcss/aspect-ratio": "^0.4.0",
